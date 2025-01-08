@@ -1,0 +1,677 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Changa:wght@200..800&family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Changa:wght@200..800&family=Luckiest+Guy&family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Changa:wght@200..800&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Squada+One&display=swap");
+
+body {
+  background-color: #9eb8ee;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Squada One", sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 95%;
+  margin: 1% 2.5%;
+  border-radius: 50px;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+}
+
+.navbar .logo a {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  text-decoration: none;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.nav-li {
+  list-style-type: none;
+  display: flex;
+  position: relative;
+}
+
+.nav-li li {
+  display: block;
+  margin: 10px 0;
+}
+.nav-li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+  font-family: "Poppins", sans-serif;
+  font-weight: 40px;
+  margin: 10px;
+}
+
+.nav-li a:hover {
+  color: #38c5db;
+}
+
+.nav-btn {
+  font-size: 2rem;
+  letter-spacing: 20px;
+}
+
+.nav-btn :hover {
+  color: #38c5db;
+}
+
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 2rem;
+  box-sizing: border-box;
+}
+
+.tombol {
+  display: none;
+  color: whitesmoke;
+  font-size: 4rem;
+  transition: 0.1s ease-in-out;
+}
+
+.tombol:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+.home-content {
+  width: 60%;
+}
+
+.home-content h1 {
+  font-size: 4rem;
+  color: #f8eded;
+}
+
+.home-content p {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.hello {
+  color: #f8eded;
+  font-family: "Poppins", system-ui;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.hero-img {
+  width: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gambar_gwa {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  position: static;
+  height: 25rem;
+}
+
+.animasi-teks {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.animasi-teks span {
+  position: relative;
+}
+
+.animasi-teks span::before {
+  content: "fullstack developer amin";
+  animation: words 40s infinite;
+}
+
+.animasi-teks span::after {
+  content: "";
+  color: lightblue;
+  background-color: rgb(158, 184, 238);
+  position: absolute;
+  width: calc(100% + 28px);
+  padding: 5px;
+  height: 100%;
+  border-left: 3px solid #ffffff;
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid rgb(255, 255, 255);
+  }
+}
+
+@keyframes words {
+  0%,
+  10% {
+    content: "SELAMAT DATANG";
+  }
+
+  11%,
+  20% {
+    content: "SUGENG RAWUH";
+  }
+
+  21%,
+  30% {
+    content: "WELCOME";
+  }
+
+  31%,
+  40% {
+    content: "BIENVENIDO";
+  }
+
+  41%,
+  50% {
+    content: "WILLKOMMENT";
+  }
+  51%,
+  61%,
+  70% {
+    content: "환영";
+  }
+  71%,
+  80% {
+    content: "欢迎";
+  }
+  81%,
+  90% {
+    content: "สวัสดิคัป";
+  }
+  91%,
+  100% {
+    content: "مرحباً";
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+
+  5%,
+  20%,
+  25%,
+  40%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+
+.btn-box a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 80%;
+  padding: 2px;
+  background: #4548ff;
+  border-radius: 15px;
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  padding: 10px 14px;
+}
+
+.btn-box a:hover {
+  color: #ffffff;
+}
+
+.btn-box a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #0a1b5a;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn-box a:hover:before {
+  width: 100%;
+}
+
+/* PINJAM PART PINJAM PART PINJAM PART PINJAM PART  PINJAM PART */
+
+.pinjam {
+  padding: 10rem 2% 1.4rem;
+}
+
+.crud {
+  font-family: "Poppins", sans-serif;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.crud h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.crud label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.crud input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  font-family: "Poppins", sans-serif;
+}
+
+.crud select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  font-family: "Poppins", sans-serif;
+}
+
+.crud select option {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  font-family: "Poppins", sans-serif;
+}
+
+.crud input:focus {
+  border-color: #333;
+  outline: none;
+}
+
+.crud button {
+  width: 100%;
+  padding: 10px;
+  background-color: #096cf7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.crud button:hover {
+  background-color: #112574;
+}
+
+.crud h3 {
+  text-align: center;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.crud table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.crud table th,
+.crud table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.crud table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.crud table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.crud table tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.crud table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* DAFTAR DAFTAR DAFTAR DAFTAR */
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 10px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image img {
+  width: 100%;
+  height: 250px;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-content p {
+  margin: 10px 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.card-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
+
+.card-container {
+  padding: 1.4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 1080px) {
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    margin-top: 5rem;
+  }
+
+  .home-content {
+    width: 100%;
+    text-align: center;
+  }
+  .hero-img {
+    width: 40rem;
+  }
+
+  .gambar_gwa {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 590px) {
+  .hero-img {
+    width: 40rem;
+  }
+  .gambar_gwa {
+    height: 18rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+    width: 90%;
+    margin: 2% 5%;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-li {
+    position: fixed;
+    top: 13%;
+    right: -100%;
+    background-color: #ffffff;
+    flex-direction: column;
+    width: 70%;
+    height: 100vh;
+    transition: 0.3s ease-in-out;
+    padding: 80px 20px 1.6rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-li.aktif {
+    right: 0;
+  }
+
+  .nav-li li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .nav-li a {
+    font-size: 18px;
+    display: block !important;
+    padding: 10px 20px;
+  }
+
+  .nav-btn {
+    font-size: 1.5rem;
+    letter-spacing: 15px;
+  }
+
+  .tombol {
+    display: block;
+    font-size: 2.5rem;
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 8px 15px;
+    width: 94%;
+    margin: 3%;
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-li {
+    width: 80%;
+  }
+}
+
+/* KONTAK */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-content h2 {
+  color: white;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+textarea {
+  resize: none;
+  padding: 20px;
+  width: 100%;
+}
+
+.form-pesan {
+  padding: 10rem 2% 1.4rem;
+}
+
+.daftar-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 990px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  height: 400px;
+  margin-top: 9rem;
+}
+
+.daftar-table th,
+.daftar-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  color: #000000;
+}
+
+.daftar-table th {
+  background-color: #5f86db;
+  font-weight: bold;
+}
+.form-group p {
+  font-family: "Poppins", sans-serif;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="./image/Modern Minimalist Graffiti Urban Brand Logo (1).png"
+          alt=""
+        />
+      </div>
+      <ul class="nav-li">
+        <li><a href="./beranda.html">Beranda</a></li>
+        <li><a href="./pinjam.html"> Form Pinjam Barang</a></li>
+        <li><a href="./beranda.html#list">Jenis Barang</a></li>
+        <li><a href="../inventaris/daftar.html">Daftar Barang</a></li>
+      </ul>
+      <ul class="nav-btn">
+        <a href="javascript:void(0)" onclick="openContactModal()"
+          ><ion-icon name="call-outline"></ion-icon
+        ></a>
+        <a href="./mail.html"><ion-icon name="mail-open-outline"></ion-icon></a>
+      </ul>
+      <div class="tombol">&#9776;</div>
+    </nav>
+    <section class="pinjam">
+      <div class="crud">
+        <h2>Apa yang kamu mau sampaikan?</h2>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Nama:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Masukkan Nama"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Masukkan Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Pesan:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Masukkan Pesan"
+            ></textarea>
+          </div>
+          <input class="form-group" type="submit" value="Submit" id="submit" />
+          <button type="button" id="print-receipt">Cetak Struk</button>
+        </form>
+        <div
+          id="receipt"
+          style="
+            display: none;
+            border: 1px solid #000;
+            padding: 10px;
+            margin-top: 20px;
+          "
+        >
+          <h3>Struk Pengiriman</h3>
+          <p><strong>Nama:</strong> <span id="receipt-name"></span></p>
+          <p><strong>Email:</strong> <span id="receipt-email"></span></p>
+          <p><strong>Pesan:</strong> <span id="receipt-message"></span></p>
+        </div>
+      </div>
+    </section>
+    <script>
+     
+    </script>
+  </body>
+</html>
